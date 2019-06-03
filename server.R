@@ -3,7 +3,7 @@
 
 # Loads the required libraries.
 # Feel free to add more libraries to the "libs" list if necessary 
-libs = c("ggplot2", "dplyr", "stringr")
+libs = c("ggplot2", "dplyr", "shiny")
 for (i in libs){
   if( !is.element(i, .packages(all.available = TRUE)) ) {
     install.packages(i)
@@ -12,3 +12,7 @@ for (i in libs){
 }
 
 raw_data <- read.csv("elements-by-episode.csv") # Original DataFrame from csv file
+
+server <- function(input, output){
+# Call Plotting Functions Here
+}
