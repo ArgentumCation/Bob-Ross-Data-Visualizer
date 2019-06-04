@@ -15,4 +15,5 @@ raw_data <- read.csv("elements-by-episode.csv") # Original DataFrame from csv fi
 
 server <- function(input, output){
 # Call Plotting Functions Here
+  
 }
