@@ -11,7 +11,7 @@ for (i in libs){
   library(i,character.only = TRUE)
 }
 
-raw_data <- read.csv("elements-by-episode.csv") # Original DataFrame from csv file
+raw_data <- read.csv("cleaned_data.csv") # Original DataFrame from csv file
 
 server <- function(input, output){
 # Call Plotting Functions Here
