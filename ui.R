@@ -3,7 +3,7 @@ library(stringr)
 raw_data <- read.csv("cleaned_data.csv",stringsAsFactors = FALSE)
 
 features <- str_to_title( gsub('_',' ',colnames(as.data.frame(raw_data))))
-features <- features[3:length(features)]
+features <- features[4:(length(features) - 1)]
 
 ui <- fluidPage(
     titlePanel('Ott Toomet\'s Fan Club Presents Bob Ross'), tags$b(tags$i(tags$u('End my suffering'))),
