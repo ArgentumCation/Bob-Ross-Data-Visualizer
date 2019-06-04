@@ -16,4 +16,6 @@ raw_data <- read.csv("cleaned_data.csv") # Original DataFrame from csv file
 server <- function(input, output){
 # Call Plotting Functions Here
   
+  #output is a table for debugging purposes
+  output$plot <- renderDataTable(reactive(select(raw_data, input$checkGroup)))
 }
