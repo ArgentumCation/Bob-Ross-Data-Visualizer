@@ -2,7 +2,7 @@ library('shiny')
 library(stringr)
 raw_data <- read.csv("cleaned_data.csv",stringsAsFactors = FALSE)
 
-features <- str_to_title( gsub('_',' ',colnames(as.data.frame(raw_data))))
+features <- gsub('_',' ',colnames(as.data.frame(raw_data)))
 features <- features[4:(length(features) - 1)]
 
 ui <- fluidPage(
