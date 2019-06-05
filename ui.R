@@ -9,7 +9,7 @@ for (i in libs) {
 
 source("plot2ui.R")
 
-ui <- navbarPage(theme=shinytheme('yeti'),
+ui <- navbarPage(theme=shinytheme('flatly'),
   'Ott Toomet\'s Fan Club Presents: Bob Ross',
   
   
