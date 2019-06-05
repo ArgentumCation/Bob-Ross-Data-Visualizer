@@ -14,8 +14,8 @@ plot2ui <- tabPanel(
   ),
   mainPanel(
     #output is a table for debugging purposes
-    dataTableOutput(outputId = "plot2"),
-    hr(),
+    shiny::dataTableOutput(outputId = "plot2"),
+    shiny::hr(),
     "Episodes can be found at:",
     a(href = "https://www.youtube.com/channel/UCxcnsr1R5Ge_fbTu5ajt8DQ", 'Youtube'),
     a(href = "https://www.twitch.tv/bobross", "Twitch"),

@@ -1,11 +1,6 @@
-libs = c("shiny", "shinythemes")
+library("shiny")
+library(shinythemes)
 
-for (i in libs) {
-  if (!is.element(i, .packages(all.available = TRUE))) {
-    install.packages(i)
-  }
-  library(i, character.only = TRUE)
-}
 
 source("plot2ui.R")
 
