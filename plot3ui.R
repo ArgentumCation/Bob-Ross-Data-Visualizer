@@ -1,5 +1,5 @@
 raw_data <- read.csv("cleaned_data.csv", stringsAsFactors = FALSE)
-
+guest_data <- guest_data[, colSums(guest_data != 0) > 0]
 features <- gsub('_', ' ', colnames(as.data.frame(guest_data)))
 features <- features[4:(length(features) - 1)]
 
