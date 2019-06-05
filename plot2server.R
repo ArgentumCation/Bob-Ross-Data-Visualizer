@@ -19,6 +19,4 @@ getEpisode <- function (features) {
   # Make Pretty
   result$TITLE <- str_to_title(result$TITLE)
   return (result)
-  
-  
 }
