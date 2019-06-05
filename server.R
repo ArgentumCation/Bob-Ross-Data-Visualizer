@@ -1,13 +1,9 @@
 # add any libraries we need
-libs <- c("ggplot2", "dplyr", "shiny", "stringr")
+library("ggplot2")
+library("dplyr")
+library("shiny")
+library("stringr")
 
-# Loads libs, installs if not already installed
-for (i in libs) {
-  if (!is.element(i, .packages(all.available = TRUE))) {
-    install.packages(i)
-  }
-  library(i, character.only = TRUE)
-}
 
 source("joint_freq_server.R")
 source("plot2server.R")
