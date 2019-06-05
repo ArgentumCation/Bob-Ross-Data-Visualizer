@@ -3,8 +3,8 @@ library("dplyr")
 library("shiny")
 library ("stringr")
 
-source("plot2ui.R")
-source("plot3ui.R")
+source("plot2server.R")
+source("plot3server.R")
 
 
 
@@ -18,4 +18,5 @@ server <- function(input, output) {
   #  )
   output$plot2 <- shiny::renderDataTable(getEpisode(input$checkGroup))
   output$plot3 <- shiny::renderPlot(getCounts(input$checkGroup2))
+
 }
