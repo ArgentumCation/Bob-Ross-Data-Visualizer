@@ -1,6 +1,6 @@
 raw_data <- read.csv("cleaned_data.csv", stringsAsFactors = FALSE)
 
-features <- gsub('_', ' ', colnames(as.data.frame(guest_data)))
+features <- gsub('_', ' ', colnames(as.data.frame(raw_data)))
 features <- features[4:(length(features) - 1)]
 
 plot3ui <- tabPanel(

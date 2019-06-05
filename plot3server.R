@@ -33,7 +33,7 @@ getCounts <- function (features) {
 #raw_data <- read.csv("cleaned_data.csv",stringsAsFactors = FALSE)
 
 #guest_vs_solo <- function(features) {
-#guest_data <- (raw_data) %>% filter(GUEST != "0") %>%
+# <- (raw_data) %>% filter(GUEST != "0") %>%
 #   mutate(add_row())
 #
 #
