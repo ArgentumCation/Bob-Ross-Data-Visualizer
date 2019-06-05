@@ -2,6 +2,11 @@ raw_data <-
   read.csv("cleaned_data.csv") # Original DataFrame from csv file
 
 getEpisode <- function (features) {
+  #Display whole list if features is empty
+  if (length(features) < 1) {
+    return(raw_data)
+  }
+  else {
   filteredList = vector()
   
   for (val in features) {
@@ -19,4 +24,5 @@ getEpisode <- function (features) {
   # Make Pretty
   result$TITLE <- str_to_title(result$TITLE)
   return (result)
+  }
 }

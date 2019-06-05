@@ -1,11 +1,13 @@
 plot2ui <- tabPanel(
-  "Plot 2",
+  "Episode Search By Tag",
   sidebarPanel(
     checkboxGroupInput(
       "checkGroup",
-      label = h3("Features"),
+      label = h3("Episode Search By Tag"),
       choices = features
-    )
+    ),
+    shiny::hr(),
+    tags$i("Select features to see what episodes have the selected features")
   ),
   mainPanel(
     dataTableOutput(outputId = "plot2"),
