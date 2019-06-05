@@ -6,7 +6,7 @@ getEpisode <- function (features) {
   
   for (val in features) {
     #Get data frames where all elements have 1 in the right column
-    temp <- list(raw_data[raw_data[val] == "Yes",])
+    temp <- list(raw_data[raw_data[val] == 1,])
     #add that to our list
     filteredList <- c(filteredList , temp)
   }
