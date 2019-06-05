@@ -8,7 +8,6 @@ plot1ui <- tabPanel(
     )
   ),
   mainPanel(
-    #output is a table for debugging purposes
     plotOutput(outputId = "plot1"),
     hr(),
     "Episodes can be found at:",
