@@ -1,0 +1,40 @@
+library(stringr)
+library(dplyr)
+
+
+raw_data <-
+  read.csv("cleaned_data.csv") # Original DataFrame from csv file
+
+getCounts <- function (features) {
+  filteredList = vector()
+  
+  for (val in features) {
+    #Get data frames where all elements have 1 in the right column
+    temp <- list(raw_data[raw_data[val] == 1,])
+    #add that to our list
+    filteredList <- c(filteredList , temp)
+  }
+ count <- vector()
+ for (val in filteredList){
+   count <- c(count,nrow(val))
+ }
+  names <- data.frame("Features" = features, "Counts" = count)
+  plot <-ggplot(data = names, aes(x=Features,y=Counts)) + geom_bar(stat="identity",position ="dodge")
+  return(plot)
+}
+
+features <- c("BEACH", "CLIFF", "CLOUDS")
+View(getCounts(features))
+
+#raw_data <- read.csv("cleaned_data.csv",stringsAsFactors = FALSE) 
+
+#guest_vs_solo <- function(features) {
+#guest_data <- (raw_data) %>% filter(GUEST != "0") %>% 
+#   mutate(add_row())
+# 
+# 
+# 
+# bob_data <- (raw_data) %>% filter(GUEST != "1") %>% select(-X, -EPISODE, -TITLE)
+# 
+# }
+

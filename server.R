@@ -16,4 +16,5 @@ server <- function(input, output) {
   #     #select(raw_data, input$checkGroup)
   #  )
   output$plot2 <- shiny::renderDataTable(getEpisode(input$checkGroup))
+  output$plot3 <- shiny::renderPlot(getCounts(input$checkGroup2))
 }

@@ -3,7 +3,7 @@ library(shinythemes)
 
 
 source("plot2ui.R")
-
+source("plot3ui.R")
 ui <- navbarPage(theme=shinytheme('flatly'),
   'Ott Toomet\'s Fan Club Presents: Bob Ross',
   
@@ -13,7 +13,7 @@ ui <- navbarPage(theme=shinytheme('flatly'),
              img(src = "Bob_Ross_2.jpg")),
     tabPanel("Plot 1"),
     plot2ui,
-    tabPanel("Plot 3")
+    plot3ui
 
   
 )
