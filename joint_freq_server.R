@@ -38,6 +38,7 @@ joint_freq <- function(features) {
     ylab("Number of Episodes") +
     scale_y_continuous(breaks = function(x) unique(floor(pretty(seq(0, (max(x) + 1) * 1.1))))) +
     coord_flip() +
+    ggtitle(paste0("Joint Frequency of Features")) +
     theme(panel.background = element_rect(fill = "white"),
           text = element_text(size=15),
           panel.grid.major.x = element_line(size = 0.5, linetype = "solid", colour = "grey95"),
