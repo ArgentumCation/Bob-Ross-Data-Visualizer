@@ -11,18 +11,29 @@ ui <- fluidPage(
   
   tabsetPanel(
     tabPanel("Plot 1"),
+    
     tabPanel(
-    "Plot 2",
-    sidebarPanel(
-      checkboxGroupInput(
-        "checkGroup",
-        label = h3("Checkbox group"),
-        choices = features
-      )
+      "Plot 2",
+      sidebarPanel(
+        checkboxGroupInput(
+          "checkGroup",
+          label = h3("Checkbox group"),
+          choices = features
+        )
+      ),
+      mainPanel(#output is a table for debugging purposes
+        dataTableOutput(outputId = "plot2"),
+        hr(),
+        "Episodes can be found at:",
+        a(href="https://www.youtube.com/channel/UCxcnsr1R5Ge_fbTu5ajt8DQ",'Youtube'),
+        a(href="https://www.twitch.tv/bobross","Twitch"),
+        a(href="https://www.netflix.com/","Netflix")
+        )
+      
+      
+      
     ),
-    mainPanel(#output is a table for debugging purposes
-      dataTableOutput(outputId = "plot2"))
-  ),
-  tabPanel("Plot 3")
+   
+     tabPanel("Plot 3")
   )
 )
