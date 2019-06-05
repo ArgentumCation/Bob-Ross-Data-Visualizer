@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 raw_data <- read.csv("cleaned_data.csv", stringsAsFactors = FALSE)
 guest_data <- guest_data[, colSums(guest_data != 0) > 0]
 features <- gsub('_', ' ', colnames(as.data.frame(guest_data)))
@@ -50,4 +49,3 @@ plot3ui <- tabPanel(
   )
 )
 
->>>>>>> c43a95ccb413606127492a55761045c40dfa95e6
