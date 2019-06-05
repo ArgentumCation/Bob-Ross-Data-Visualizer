@@ -1,15 +1,6 @@
 raw_data <-
   read.csv("cleaned_data.csv") # Original DataFrame from csv file
 
-for (col in 4:ncol(raw_data)) {
-  for (row in 1:nrow(raw_data)) {
-    raw_data[row, col] = if (raw_data[row, col] == 1)
-      "Yes"
-    else
-      "No"
-  }
-}
-
 getEpisode <- function (features) {
   filteredList = vector()
   
