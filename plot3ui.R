@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 raw_data <- read.csv("cleaned_data.csv", stringsAsFactors = FALSE)
 
 features <- gsub('_', ' ', colnames(as.data.frame(raw_data)))
@@ -49,4 +48,3 @@ plot3ui <- tabPanel(
   )
 )
 
->>>>>>> b755027ef969f4328d80185a60156125cfbab5ec
