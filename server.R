@@ -4,6 +4,7 @@ library("shiny")
 library ("stringr")
 
 source("plot2server.R")
+source("plot3server.R")
 
 
 
