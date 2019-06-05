@@ -10,6 +10,8 @@ ui <- fluidPage(
   tags$b(tags$i(tags$u('End my suffering'))),
   
   tabsetPanel(
+    tabPanel("Background"),
+    img(src = "Bob_Ross_2.jpg"),
     tabPanel("Plot 1"),
     tabPanel(
     "Plot 2",
