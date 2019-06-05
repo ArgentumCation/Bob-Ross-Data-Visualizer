@@ -18,7 +18,7 @@ getCounts <- function (features) {
   for (val in filteredList) {
     count <- c(count, nrow(val))
   }
-  print(nrow(features))
+  #print(nrow(features))
   if (length(features) < 1) {
     plot <- "No data to display :("
   }
