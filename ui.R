@@ -1,9 +1,15 @@
-library('shiny')
-library(stringr)
+libs = c("shiny", "shinythemes")
+
+for (i in libs) {
+  if (!is.element(i, .packages(all.available = TRUE))) {
+    install.packages(i)
+  }
+  library(i, character.only = TRUE)
+}
 
 source("plot2ui.R")
 
-ui <- fluidPage(
+ui <- fluidPage(theme=shinytheme('cerulean'),
   titlePanel('Ott Toomet\'s Fan Club Presents Bob Ross'),
   tags$b(tags$i(tags$u('End my suffering'))),
   
@@ -13,5 +19,6 @@ ui <- fluidPage(
     tabPanel("Plot 1"),
     plot2ui,
     tabPanel("Plot 3")
+
   )
 )
