@@ -5,10 +5,10 @@ getCounts <- function (features) {
   filteredList = vector()
   guest_data <- (raw_data) %>% filter(GUEST != "0") 
   guest_data <- guest_data[, colSums(guest_data != 0) > 0]
-
+  
   
   bob_data <- (raw_data) %>% filter(GUEST != "1")
-    for (val in features) {
+  for (val in features) {
     #Get data frames where all elements have 1 in the right column
     temp <- list(guest_data[guest_data[val] == 1, ])
     #add that to our list
@@ -26,7 +26,7 @@ getCounts <- function (features) {
   else {
     names <- data.frame("Features" = features, "Counts" = count)
     plot <- ggplot(data = names, aes(x = Features, y = Counts, fill = Features)) + geom_bar(stat =
-                                                                                          "identity", position = "dodge") + theme(legend.position="none")
+                                                                                              "identity", position = "dodge") + theme(legend.position="none")
   }
   
   return(plot)
@@ -46,3 +46,4 @@ getCounts <- function (features) {
 # bob_data <- (raw_data) %>% filter(GUEST != "1") %>% select(-X, -EPISODE, -TITLE)
 #
 # }
+
