@@ -16,6 +16,7 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot(joint_freq(input$jointCheck))
   output$plot2 <- renderDataTable(getEpisode(input$checkGroup))
-  output$plot3 <- renderPlot(getCounts(input$checkGroup2))
+  output$plot3Guest <- renderPlot(getGuestCounts(input$checkGroup2))
+  output$plot3Bob <- renderPlot(getBobCounts(input$checkGroup2))
 
 }
