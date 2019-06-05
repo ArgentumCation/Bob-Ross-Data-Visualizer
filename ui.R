@@ -1,9 +1,7 @@
 library('shiny')
 library(stringr)
-raw_data <- read.csv("cleaned_data.csv", stringsAsFactors = FALSE)
 
-features <- gsub('_', ' ', colnames(as.data.frame(raw_data)))
-features <- features[4:(length(features) - 1)]
+source("plot2ui.R")
 
 ui <- fluidPage(
   titlePanel('Ott Toomet\'s Fan Club Presents Bob Ross'),
@@ -11,20 +9,9 @@ ui <- fluidPage(
   
   tabsetPanel(
     tabPanel("Background",
-    img(src = "Bob_Ross_2.jpg")),
+             img(src = "Bob_Ross_2.jpg")),
     tabPanel("Plot 1"),
-    tabPanel(
-    "Plot 2",
-    sidebarPanel(
-      checkboxGroupInput(
-        "checkGroup",
-        label = h3("Checkbox group"),
-        choices = features
-      )
-    ),
-    mainPanel(#output is a table for debugging purposes
-      dataTableOutput(outputId = "plot2"))
-  ),
-  tabPanel("Plot 3")
+    plot2ui,
+    tabPanel("Plot 3")
   )
 )
