@@ -9,16 +9,16 @@ for (i in libs) {
 
 source("plot2ui.R")
 
-ui <- fluidPage(theme=shinytheme('cerulean'),
-  titlePanel('Ott Toomet\'s Fan Club Presents Bob Ross'),
-  tags$b(tags$i(tags$u('End my suffering'))),
+ui <- navbarPage(theme=shinytheme('yeti'),
+  'Ott Toomet\'s Fan Club Presents: Bob Ross',
   
-  tabsetPanel(
+  
+  
     tabPanel("Background",
              img(src = "Bob_Ross_2.jpg")),
     tabPanel("Plot 1"),
     plot2ui,
     tabPanel("Plot 3")
 
-  )
+  
 )
