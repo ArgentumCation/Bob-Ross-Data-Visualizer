@@ -7,7 +7,7 @@ plot3ui <- tabPanel(
   "Plot 3",
   sidebarPanel(
     checkboxGroupInput(
-      "checkGroup",
+      "checkGroup2",
       label = h3("Features"),
       choices = features
     )

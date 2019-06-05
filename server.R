@@ -3,7 +3,8 @@ library("dplyr")
 library("shiny")
 library ("stringr")
 
-source("plot2server.R")
+source("plot2ui.R")
+source("plot3ui.R")
 
 
 
