@@ -4,7 +4,8 @@ raw_data <-
 getEpisode <- function (features) {
   #Display whole list if features is empty
   if (length(features) < 1) {
-    return(raw_data)
+    raw_data$TITLE <- str_to_title(raw_data$TITLE)
+    return(raw_data[c(2, 3)])
   }
   else {
   filteredList = vector()
