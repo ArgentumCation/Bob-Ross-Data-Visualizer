@@ -1,7 +1,7 @@
 library("shiny")
 library(shinythemes)
 
-
+source("joint_freq_ui.R")
 source("plot2ui.R")
 source("plot3ui.R")
 ui <- navbarPage(theme=shinytheme('flatly'),
@@ -11,7 +11,7 @@ ui <- navbarPage(theme=shinytheme('flatly'),
   
     tabPanel("Background",
              img(src = "Bob_Ross_2.jpg")),
-    tabPanel("Plot 1"),
+    plot1ui,
     plot2ui,
     plot3ui
 
