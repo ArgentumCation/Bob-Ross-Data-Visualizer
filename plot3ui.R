@@ -4,13 +4,14 @@ features <- gsub('_', ' ', colnames(as.data.frame(guest_data)))
 features <- features[4:(length(features) - 1)]
 
 plot3ui <- tabPanel(
-  "Plot 3",
+  "Ross: Guest vs. Solo",
   sidebarPanel(
     checkboxGroupInput(
       "checkGroup2",
       label = h3("Features"),
       choices = features
     )
+  
   ),
   mainPanel(
     plotOutput(outputId = "plot3"),
