@@ -22,9 +22,9 @@ plot3ui <- tabPanel(
     p(em("Select features to compare Bob and his guests"))
   ),
   mainPanel(
-    plotOutput(outputId = "plot3Guest"),
-    plotOutput(outputId = "plot3Bob"),
-    hr(),
+    shiny::plotOutput(outputId = "plot3Guest"),
+    shiny::plotOutput(outputId = "plot3Bob"),
+    shiny::hr(),
     "Episodes can be found at:",
     a(href = "https://www.youtube.com/channel/UCxcnsr1R5Ge_fbTu5ajt8DQ", 'Youtube'),
     a(href = "https://www.twitch.tv/bobross", "Twitch"),
