@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "title": "Lab",
+    "owner": "Gunhyung Cho"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "threat model",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
